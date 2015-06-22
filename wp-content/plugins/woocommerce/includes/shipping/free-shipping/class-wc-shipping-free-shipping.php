@@ -228,16 +228,5 @@ class WC_Shipping_Free_Shipping extends WC_Shipping_Method {
 		);
 		$this->add_rate( $args );
 	}
-    
-    function grunwell_restrict_free_shipping( $is_available ) {
-      $restricted = array( 'AK', 'AS', 'GU', 'HI', 'MP', 'PR', 'UM', 'VI' );
-      foreach ( WC()->cart->get_shipping_packages() as $package ) {
-        if ( in_array( $package['destination']['state'], $restricted ) ) {
-          return false;
-        }
-      }
-      return $is_available;
-    }
-    add_filter( 'woocommerce_shipping_free_shipping_is_available', 'grunwell_restrict_free_shipping' );
 
 }
