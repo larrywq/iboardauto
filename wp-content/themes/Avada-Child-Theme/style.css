@@ -1,0 +1,12 @@
+/*
+Theme Name: Avada Child
+Description: Child theme for the Avada
+Author: Your name here
+Template: Avada
+*/
+
+.slide-content-container .slide-content {margin-top:140px!important;}
+
+/* body.post-type-archive-product #wrapper .page-title-container {
+    display: none !important;
+}
